@@ -7,8 +7,10 @@ $('#query').focus();
 function showResults(results) {
 	var statusHTML = "<ul>";
 	$.each(results, function(index, value){
-			statusHTML += "<li>" + value.snippet.title;
-			statusHTML += "</li>"; 
+			statusHTML += "<li>" + value.snippet.title + "</li>";
+			statusHTML += "<ul class='more-info'> <li>" + value.snippet.description + "</li>";
+			statusHTML += "<li class= 'thumbnail'> <img src='" + value.snippet.thumbnails.medium.url + "'alt='thumbnail'></li>"
+			statusHTML += "</ul>";
 	}); //End each
 	statusHTML += "</ul>";
 	$('#search-results').html(statusHTML);
