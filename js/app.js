@@ -22,6 +22,7 @@ function getRequest (searchTerm) {
 	var params = {
 		part : 'id,snippet',
 		key : "AIzaSyBXRNgdiVy09x47yBxaUNGbwDFdb5EblvQ",
+		maxResults : 10,
 		q : searchTerm
 	};
 
