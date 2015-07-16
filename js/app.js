@@ -9,7 +9,7 @@ function showResults(results) {
 	$.each(results, function(index, value){
 			statusHTML += "<li>" + value.snippet.title + "</li>";
 			statusHTML += "<ul class='more-info'> <li>" + value.snippet.description + "</li>";
-			statusHTML += "<li class= 'thumbnail'> <img src='" + value.snippet.thumbnails.medium.url + "'alt='thumbnail'></li>"
+			statusHTML += "<li class= 'thumbnail'> <a href='http://www.youtube.com/watch?v=" + value.id.videoId + "' target=_blank> <img src='" + value.snippet.thumbnails.medium.url + "'alt='thumbnail'> </a> </li>"
 			statusHTML += "</ul>";
 	}); //End each
 	statusHTML += "</ul>";
